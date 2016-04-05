@@ -19,7 +19,7 @@ gem 'bootstrap-sass'
 
 # Authentication
 gem 'bcrypt', '~> 3.1.7'
-gem 'authlogic', '~> 3'
+gem 'authlogic', '~> 3.4.6'
 
 ## Authorization
 gem 'pundit'
