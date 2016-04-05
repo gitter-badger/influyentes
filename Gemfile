@@ -25,6 +25,7 @@ gem 'authlogic', '~> 3.4.6'
 gem 'pundit'
 
 # Template Engine
+gem 'haml'
 gem 'haml-rails'
 
 # Pages
