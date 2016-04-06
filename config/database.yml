@@ -6,12 +6,14 @@ default: &default
 development:
   <<: *default
   database: citizens_development
+  host: localhost
   username: citizens
   password: citizens
 
 test:
   <<: *default
   database: citizens_test
+  host: localhost
   username: citizens
   password: citizens
 
