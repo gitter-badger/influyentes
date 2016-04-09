@@ -231,7 +231,7 @@ PLATFORMS
 DEPENDENCIES
   authlogic (~> 3.4.6)
   bcrypt (~> 3.1.7)
-  bootstrap-sass
+  bootstrap-sass (~> 3.3.6)
   byebug
   capybara
   coffee-rails (~> 4.1.0)
