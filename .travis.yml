@@ -8,10 +8,6 @@ services:
   - postgresql
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
-branches:
-  only:
-    - master
-    - staging
 before_install:
   - gem --version
 webhooks:
