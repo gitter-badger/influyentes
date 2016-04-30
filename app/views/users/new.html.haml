@@ -1,0 +1,15 @@
+.row
+  .col-sm-offset-4.col-md-4
+    %h1.text-center= t("users.new.title")
+
+    = simple_form_for @user, url: signup_path, wrapper: :horizontal_form,
+      html: { class: "form-horizontal", role: "form", id: "register" } do |f|
+      = f.input :login, required: true
+      = f.input :email, required: true
+      = f.input :password, required: true
+      = f.input :password_confirmation, required: true
+      .form-group
+        .col-sm-offset-3.col-sm-9
+          = f.button :submit, t("users.new.action")
+
+      = link_to t("users.shared.link_login"), login_path

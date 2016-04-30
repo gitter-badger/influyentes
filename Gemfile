@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.6'
+gem 'rails-i18n', '~> 4.0.0'
 
 # Database
 gem 'pg', '~> 0.15'
@@ -37,16 +38,21 @@ gem 'simple_form'
 # Email
 gem 'sendgrid'
 
+# User avatar
+gem 'gravtastic'
+
 group :development do
   gem 'html2haml'
   gem 'better_errors'
-  gem 'byebug'                # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'web-console', '~> 2.0' # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'letter_opener'
+  gem 'letter_opener_web'
 end
 
 group :development, :test do
+  gem 'pry-byebug' # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'

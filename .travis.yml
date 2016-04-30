@@ -1,13 +1,16 @@
 language: ruby
 sudo: false
 rvm:
-  - 2.2.3
+  - 2.2.0
+  - 2.2.4
+  - 2.2.5
 addons:
   postgresql: "9.4"
 services:
   - postgresql
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
+  - cp -f config/database.travis.yml config/database.yml
 before_install:
   - gem --version
 webhooks:

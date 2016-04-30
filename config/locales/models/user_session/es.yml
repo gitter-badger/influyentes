@@ -1,0 +1,8 @@
+es:
+  activerecord:
+    models:
+      user_session: "Usuario"
+    attributes:
+      user_session:
+        login: "Pseudonimo"
+        password: "Contraseña"

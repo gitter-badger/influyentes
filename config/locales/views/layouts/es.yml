@@ -1,0 +1,11 @@
+es:
+  layouts:
+    nav:
+      links:
+        home: "Inició"
+        profile: "Mi perfil"
+        signup: "Registrarse"
+        login: "Iniciar sesión"
+        logout: "Cerrar sesión"
+      separators:
+        session: "Sesión"

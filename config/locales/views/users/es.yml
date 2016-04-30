@@ -1,0 +1,34 @@
+es:
+  users:
+    new:
+      title: "Registrate"
+      action: "Registrarse"
+      messages:
+        signed_up_success: "Bienvenido! Te registraste correctamente."
+    show:
+      title: "Perfil"
+    edit:
+      title: "Editar Perfil"
+      action: "Actualizar my prefil"
+      messages:
+        updated_success: "Actualizaste correctamente tu perfil"
+    password:
+      title: "Has olvidado tu contraseña?"
+      description: "Rellene el siguiente formulario. Nosotros nos encargaremos de enviarle por correo electrónico las instrucciones para restablecer la contraseña."
+      action: "Resetear mi contraseña"
+    password_reset:
+      title: "Cambiar mi contraseña"
+      action: "Actualizar mi contraseña y acceder a mi cuenta"
+    session:
+      title: "Iniciar sesión"
+      action: "Iniciar sesión"
+      messages:
+        logged_in: "Inició sesión."
+        error_logged_in: "Los datos introducidos no son válidos."
+        logged_out: "Cerraste sesión."
+        you_must_be_logged: "Tienes que estar loggeado para acceder a esta pagina."
+    shared:
+      link_login: "Tengo un cuenta"
+      link_signup: "Crear mi cuenta"
+      link_password: "Olvide mi contraseña"
+      link_cancel: "Cancelar"

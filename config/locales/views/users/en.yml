@@ -1,0 +1,34 @@
+en:
+  users:
+    new:
+      title: "Sign up"
+      action: "Register"
+      messages:
+        signed_up_success: "Welcome! You have signed up successfully."
+    show:
+      title: "Profile"
+    edit:
+      title: "Edit Profile"
+      action: "Update my profile"
+      messages:
+        updated_success: "Successfully updated your profile"
+    password:
+      title: "Forgot Password"
+      description: "Fill out the form below and instructions to reset your password will be emailed to you:"
+      action: "Reset my password"
+    password_reset:
+      title: "Change My Password"
+      action: "Update my password and log me in"
+    session:
+      title: "Log in"
+      action: "Log in"
+      messages:
+        logged_in: "You logged in successfully."
+        error_logged_in: "The entered data is invalid."
+        logged_in: "You logged out successfully."
+        you_must_be_logged: "You must be logged in to access this page."
+    shared:
+      link_login: "I have an account"
+      link_signup: "Create my account"
+      link_password: "I forgot my password"
+      link_cancel: "Cancel"

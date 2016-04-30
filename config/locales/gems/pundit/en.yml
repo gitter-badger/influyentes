@@ -1,0 +1,10 @@
+en:
+  pundit:
+    default: "You cannot perform this action."
+    user_policy:
+      new?: "You cannot sign up again because you already have an open session."
+      create?: "You cannot sign up again because you already have an open session."
+      login?: "You cannot log in because you already have an open session."
+      show?: "You cannot see the profile of other an user."
+      update?: "Permission denied."
+      edit?: "Permission denied."

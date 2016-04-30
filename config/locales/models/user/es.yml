@@ -1,0 +1,14 @@
+es:
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        login: "Pseudonimo"
+        email: "Correo electrónico"
+        password: "Contraseña"
+        password_confirmation: "Confirma la contraseña"
+    validations:
+      user:
+        login:
+          invalid_format: "debes usar solamente letras, números y guiones bajos. Entre 3 y 15 caracteres."

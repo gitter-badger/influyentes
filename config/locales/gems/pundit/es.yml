@@ -1,0 +1,10 @@
+es:
+  pundit:
+    default: "Usted no puede hacer esta acción."
+    user_policy:
+      new?: "Usted no puede registrarse de nuevo porque ya tienes una sesión abierta."
+      create?: "Usted no puede registrarse de nuevo porque ya tienes una sesión abierta."
+      login?: "Usted no puede iniciar sesión porque ya tienes una sesión abierta."
+      show?: "Usted no puede ver el perfil de otro usuario."
+      update?: "Permiso denegado."
+      edit?: "Permiso denegado."
