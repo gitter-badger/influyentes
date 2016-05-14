@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.3
+
+Posts and polices.
+
 ## 0.0.2
 
 Established the structure for assets.
