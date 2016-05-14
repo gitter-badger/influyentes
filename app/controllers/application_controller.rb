@@ -8,8 +8,7 @@ class ApplicationController < ActionController::Base
   # Custom error messages
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
-  helper_method :user_session, :current_user, :user_signed_in?,
-    :allowed_to_access_administration_panel?
+  helper_method :user_session, :current_user, :user_signed_in?
 
   private
 
