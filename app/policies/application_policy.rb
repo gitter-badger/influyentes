@@ -7,7 +7,7 @@ class ApplicationPolicy
   end
 
   def index?
-    false
+    true
   end
 
   def show?
@@ -36,6 +36,14 @@ class ApplicationPolicy
 
   def scope
     Pundit.policy_scope!(user, record.class)
+  end
+
+  def user_identified?
+    user && user.identified?
+  end
+
+  def user_sanctioned?
+    user && (user.banned? || user.deleted?)
   end
 
   class Scope

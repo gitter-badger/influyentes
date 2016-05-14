@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.3.1'
 
 gem 'rails', '4.2.6'
 gem 'rails-i18n', '~> 4.0.0'
@@ -10,7 +11,6 @@ gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -24,6 +24,10 @@ gem 'authlogic', '~> 3.4.6'
 
 ## Authorization
 gem 'pundit'
+
+# Administration
+gem 'administrate', '~> 0.2.0'
+gem 'administrate-field-image'
 
 # Template Engine
 gem 'haml'
@@ -40,6 +44,12 @@ gem 'sendgrid'
 
 # User avatar
 gem 'gravtastic'
+
+# Machine state
+gem 'aasm'
+
+# Markdown
+gem 'kramdown'
 
 group :development do
   gem 'html2haml'

@@ -1,4 +1,12 @@
 module ApplicationHelper
+  def controller?(*controller)
+    controller.include?(params[:controller])
+  end
+
+  def action?(*action)
+    action.include?(params[:action])
+  end
+
   def bootstrap_alert_class_for(flash_type)
     case flash_type
       when "success" then "alert-success" # Green

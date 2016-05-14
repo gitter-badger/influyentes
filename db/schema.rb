@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160409155211) do
+ActiveRecord::Schema.define(version: 20160506180551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "posts", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.text     "body"
+    t.integer  "state",      default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "login",                          null: false
@@ -34,6 +45,9 @@ ActiveRecord::Schema.define(version: 20160409155211) do
     t.string   "last_login_ip"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.integer  "role",               default: 0, null: false
+    t.integer  "identification",     default: 0, null: false
+    t.datetime "identified_at"
   end
 
 end

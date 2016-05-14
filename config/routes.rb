@@ -16,8 +16,33 @@ Rails.application.routes.draw do
   get  "signup", controller: "users", action: "new"
   post "signup", controller: "users", action: "create"
 
+  # Posts
+  resources :posts do
+    collection do
+      get :my
+      get :review
+      get :published
+      get :unpublished
+      get :trash
+    end
+
+    member do
+      get :submit
+      get :publish
+      get :unpublish
+    end
+  end
+
   # Root
   root "home#index"
+
+  # Administration
+  namespace :admin do
+    resources :posts
+    resources :users
+
+    root to: "posts#index"
+  end
 
   # Debug emails
   if Rails.env.development?

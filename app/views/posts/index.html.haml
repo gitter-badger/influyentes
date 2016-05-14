@@ -1,0 +1,24 @@
+.page-header
+  %h1
+    Posts
+    = link_to('New Post', new_post_path, class: "btn btn-primary") if policy(Post).create?
+
+  %p.text-center
+    - if user_signed_in?
+      = link_to "All", posts_path, class: "btn btn-#{action?('index') ? 'info' : 'default'}"
+      = link_to "Only my", my_posts_path, class: "btn btn-#{action?('my') ? 'info' : 'default'}"
+      - if current_user.try(:can_review?)
+        = link_to "In review", review_posts_path, class: "btn btn-#{action?('review') ? 'info' : 'default'}"
+
+- @posts.each do |post|
+  %div
+    %h3= post.title
+    %p= "#{post.state} ~ Created by #{post.user.name}"
+    %p= post.body
+    %p
+      = link_to('Show', post, class: "btn btn-default") if policy(post).show?
+      = link_to('Edit', edit_post_path(post), class: "btn btn-warning") if policy(post).edit?
+      = link_to('Submit', submit_post_path(post), class: "btn btn-warning") if policy(post).submit?
+      = link_to('Publish', publish_post_path(post), class: "btn btn-warning") if policy(post).publish?
+      = link_to('Unpublish', unpublish_post_path(post), class: "btn btn-warning") if policy(post).unpublish?
+      = link_to('Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger") if policy(post).delete?

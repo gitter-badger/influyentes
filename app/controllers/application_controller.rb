@@ -8,8 +8,8 @@ class ApplicationController < ActionController::Base
   # Custom error messages
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
-  # Helpers
-  helper_method :user_session, :current_user, :user_signed_in?
+  helper_method :user_session, :current_user, :user_signed_in?,
+    :allowed_to_access_administration_panel?
 
   private
 
@@ -26,6 +26,13 @@ class ApplicationController < ActionController::Base
   # Checks whether there is a user signed in or not
   def user_signed_in?
     current_user.present?
+  end
+
+  def authenticate_user
+    unless user_signed_in?
+      flash[:error] = "You need to log in or sign up before continuing."
+      redirect_to(request.referrer || root_path)
+    end
   end
 
   # Create a flash error for pundit authoritzations and redirect

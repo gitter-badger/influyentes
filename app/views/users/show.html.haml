@@ -1,6 +1,8 @@
 .row
   .col-sm-offset-4.col-md-4.text-center
     %h1= t("users.show.title")
-    %p= @user.login
+    %p.strong= @user.name
+    %p= "Role: #{@user.role}"
+    %p= "Identificado: #{@user.identified?}"
     %p= image_tag @user.gravatar_url
     %p= link_to 'Edit', edit_user_path

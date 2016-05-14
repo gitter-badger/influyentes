@@ -1,0 +1,4 @@
+es:
+  authlogic:
+    error_messages:
+      login_invalid: "debes usar solamente letras, números y guiones bajos."

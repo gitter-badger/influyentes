@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      @user.deliver_confirmation_email_instructions!
       flash[:notice] = I18n.t("users.new.messages.signed_up_success")
       redirect_to root_path
     else
