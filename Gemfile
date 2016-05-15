@@ -49,7 +49,7 @@ gem 'gravtastic'
 gem 'aasm'
 
 # Markdown
-gem 'kramdown'
+gem 'redcarpet'
 
 group :development do
   gem 'html2haml'

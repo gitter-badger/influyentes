@@ -14,7 +14,7 @@
   %div
     %h3= post.title
     %p= "#{post.state} ~ Created by #{post.user.name}"
-    %p= post.body
+    = markdown post.body
     %p
       = link_to('Show', post, class: "btn btn-default") if policy(post).show?
       = link_to('Edit', edit_post_path(post), class: "btn btn-warning") if policy(post).edit?

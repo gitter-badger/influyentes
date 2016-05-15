@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.belongs_to :user, index: true
       t.string :title
+      t.text :description
       t.text :body
       t.integer :state, default: 0, null: false
 
