@@ -1,5 +1,7 @@
 # Citizens
 
+[![Join the chat at https://gitter.im/influyentes/influyentes](https://badges.gitter.im/influyentes/influyentes.svg)](https://gitter.im/influyentes/influyentes?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/CitizensProject/citizens.svg)][Continuous Integration]
 [![Dependency Status](https://gemnasium.com/CitizensProject/citizens.svg)][Dependencies]
 [![Code Climate](https://codeclimate.com/github/CitizensProject/citizens/badges/gpa.svg)][Code Climate]
